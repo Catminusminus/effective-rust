@@ -27,7 +27,7 @@ where
 
     #[inline]
     fn poll(self: Pin<&mut Self>, cx: &Context) -> Poll<Self::Output, Self::Effect> {
-        set_task_context(cx, || match self.project().0.resume() {
+        set_task_context(cx, || match self.project().0.resume(()) {
             GeneratorState::Complete(v) => Poll::complete(v),
             GeneratorState::Yielded(Poll::Event(Event::Effect(e))) => Poll::effect(e),
             GeneratorState::Yielded(Poll::Pending) => Poll::Pending,
