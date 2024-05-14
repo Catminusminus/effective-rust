@@ -1,4 +1,4 @@
-#![feature(generators, never_type)]
+#![feature(coroutines, never_type)]
 
 use eff::*;
 

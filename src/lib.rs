@@ -1,4 +1,4 @@
-#![feature(generator_trait, never_type, stmt_expr_attributes, proc_macro_hygiene)]
+#![feature(coroutine_trait, never_type, stmt_expr_attributes, proc_macro_hygiene)]
 
 use proc_macro_hack::proc_macro_hack;
 use std::marker::PhantomData;

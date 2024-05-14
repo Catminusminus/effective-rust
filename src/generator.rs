@@ -1,8 +1,7 @@
 //! Convert a generator into an effectful computation
-
 use super::{context::set_task_context, Context, Effectful, Event, Poll};
 
-use std::ops::{Generator, GeneratorState};
+use std::ops::{Coroutine as Generator, CoroutineState as GeneratorState};
 use std::pin::Pin;
 
 use pin_project::pin_project;
